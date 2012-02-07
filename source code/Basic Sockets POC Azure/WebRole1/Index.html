@@ -1,0 +1,19 @@
+<!doctype html>
+<HTML>
+<HEAD>
+<script src="/socket.io/socket.io.js"></script>
+</HEAD>
+<BODY>
+<div id ="output"></div>
+
+<script>  
+
+var output = document.getElementById("output");
+var socket = io.connect('http://localhost:81'); 
+ 
+ socket.on('news', function (data) {
+     output.innerHTML = JSON.stringify(data);    
+     socket.emit('my other event', { my: 'data' });  
+     });</script>
+</BODY>
+
