@@ -2,18 +2,84 @@
 <HTML>
 <HEAD>
 <script src="/socket.io/socket.io.js"></script>
+<script  
+     type="text/javascript"           
+     src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"> 
+</script> 
+
 </HEAD>
 <BODY>
+
+  <form method="post" action="" onsubmit="return false;" />
+
 <div id ="output"></div>
 
 <script>  
 
 var output = document.getElementById("output");
-var socket = io.connect('http://localhost:81'); 
+var socket = io.connect('http://localhost:4567'); 
  
  socket.on('news', function (data) {
      output.innerHTML = JSON.stringify(data);    
      socket.emit('my other event', { my: 'data' });  
-     });</script>
-</BODY>
+     });
 
+ socket.on('update', function(data){
+//  alert('message returned from server');
+          // when the client gets a message from the server, 
+          // add it to the buffer and display the message
+    //  buffer.push(message);
+    //  if(buffer.length > 15)
+    //    buffer.shift();
+  //  alert(data);
+  //  alert(JSON.stringify(data));
+    var  msg = JSON.stringify(data);   
+      appendMessage(msg);
+    });
+
+
+
+
+
+function appendMessage(msg){
+      $('div#chat-box').append('<div>' + msg + '</div>'); 
+    }
+
+
+// send a message to the server
+    function sendMessage()
+    {
+try
+{
+      var msg = $("input#message").val();
+        // alert('about to send :' + msg);
+
+
+  	  	$("input#message").val('');
+  	   
+ 	   	
+  	  	 // 	  	socket.send(msg,'message' );
+         socket.emit('user message', msg);
+  	  	 // send the message
+      	  	  //  appendMessage('You: ' + msg); // show the message
+
+}
+catch(err)
+
+{
+  alert(err.message);
+}
+  	  }
+ </script>
+
+
+    <div id="chat-box"></div>
+
+    <input type="text" name="message" id="message" value="" />
+    <input id="client" name="client" value="" type="hidden" />
+    <input type="button" name="send" id="send" value="Send" onclick="sendMessage();" />
+  
+
+  </form>
+</BODY>
+</HTML>

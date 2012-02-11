@@ -16,7 +16,15 @@ function handler (req, res) {
                         });
                 }
 
-        io.sockets.on('connection', function (socket) {
-          socket.emit('news', { hello: 'world' }); 
-           socket.on('my other event', function (data) {
-               console.log(data);  });});
+      io.sockets.on('connection', function (socket) {
+                console.log(socket);
+                socket.emit('news', { data: 'you are now connected'});
+ 
+   socket.on('message', function (content) {
+                   console.log(data);
+                   socket.broadcast('message',{message: content })
+                     });
+                    
+    socket.on('my other event', function (data) {
+                   console.log(data);  });
+                 });

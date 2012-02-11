@@ -1,38 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="sockets" generation="1" functional="0" release="0" Id="19699606-e506-4477-a415-ddecdd325876" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AidanSockets" generation="1" functional="0" release="0" Id="b23a0f17-61f6-450a-92dc-69d125664bae" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
-    <group name="socketsGroup" generation="1" functional="0" release="0">
+    <group name="AidanSocketsGroup" generation="1" functional="0" release="0">
       <componentports>
         <inPort name="WebRole1:Endpoint1" protocol="http">
           <inToChannel>
-            <lBChannelMoniker name="/sockets/socketsGroup/LB:WebRole1:Endpoint1" />
+            <lBChannelMoniker name="/AidanSockets/AidanSocketsGroup/LB:WebRole1:Endpoint1" />
           </inToChannel>
         </inPort>
       </componentports>
       <settings>
         <aCS name="WebRole1Instances" defaultValue="[1,1,1]">
           <maps>
-            <mapMoniker name="/sockets/socketsGroup/MapWebRole1Instances" />
+            <mapMoniker name="/AidanSockets/AidanSocketsGroup/MapWebRole1Instances" />
           </maps>
         </aCS>
       </settings>
       <channels>
         <lBChannel name="LB:WebRole1:Endpoint1">
           <toPorts>
-            <inPortMoniker name="/sockets/socketsGroup/WebRole1/Endpoint1" />
+            <inPortMoniker name="/AidanSockets/AidanSocketsGroup/WebRole1/Endpoint1" />
           </toPorts>
         </lBChannel>
       </channels>
       <maps>
         <map name="MapWebRole1Instances" kind="Identity">
           <setting>
-            <sCSPolicyIDMoniker name="/sockets/socketsGroup/WebRole1Instances" />
+            <sCSPolicyIDMoniker name="/AidanSockets/AidanSocketsGroup/WebRole1Instances" />
           </setting>
         </map>
       </maps>
       <components>
         <groupHascomponents>
-          <role name="WebRole1" generation="1" functional="0" release="0" software="C:\node\sockets\local_package.csx\roles\WebRole1" entryPoint="base\x86\WaHostBootstrapper.exe" parameters="base\x86\WaIISHost.exe " memIndex="768" hostingEnvironment="frontendadmin" hostingEnvironmentVersion="2">
+          <role name="WebRole1" generation="1" functional="0" release="0" software="C:\node\AzureNodeChatClient\sourcecode\ChatRoom\local_package.csx\roles\WebRole1" entryPoint="base\x86\WaHostBootstrapper.exe" parameters="base\x86\WaIISHost.exe " memIndex="768" hostingEnvironment="frontendadmin" hostingEnvironmentVersion="2">
             <componentports>
               <inPort name="Endpoint1" protocol="http" portRanges="80" />
             </componentports>
@@ -45,8 +45,8 @@
             </resourcereferences>
           </role>
           <sCSPolicy>
-            <sCSPolicyIDMoniker name="/sockets/socketsGroup/WebRole1Instances" />
-            <sCSPolicyFaultDomainMoniker name="/sockets/socketsGroup/WebRole1FaultDomains" />
+            <sCSPolicyIDMoniker name="/AidanSockets/AidanSocketsGroup/WebRole1Instances" />
+            <sCSPolicyFaultDomainMoniker name="/AidanSockets/AidanSocketsGroup/WebRole1FaultDomains" />
           </sCSPolicy>
         </groupHascomponents>
       </components>
@@ -57,11 +57,11 @@
     </group>
   </groups>
   <implements>
-    <implementation Id="39d14e1f-6f54-47c1-ba05-1810e209f893" ref="Microsoft.RedDog.Contract\ServiceContract\socketsContract@ServiceDefinition">
+    <implementation Id="a282b98a-18ff-4d93-9749-f66dc4fa9beb" ref="Microsoft.RedDog.Contract\ServiceContract\AidanSocketsContract@ServiceDefinition">
       <interfacereferences>
-        <interfaceReference Id="19f117f2-61a7-4bf6-9356-160c94eea3a4" ref="Microsoft.RedDog.Contract\Interface\WebRole1:Endpoint1@ServiceDefinition">
+        <interfaceReference Id="dfabc1a7-c68f-4f91-aeb0-1c0714cff3da" ref="Microsoft.RedDog.Contract\Interface\WebRole1:Endpoint1@ServiceDefinition">
           <inPort>
-            <inPortMoniker name="/sockets/socketsGroup/WebRole1:Endpoint1" />
+            <inPortMoniker name="/AidanSockets/AidanSocketsGroup/WebRole1:Endpoint1" />
           </inPort>
         </interfaceReference>
       </interfacereferences>

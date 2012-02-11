@@ -11,7 +11,7 @@
   </Startup>
   <Runtime />
   <Sites>
-    <Site name="Web" physicalDirectory="C:\node\sockets\WebRole1">
+    <Site name="Web" physicalDirectory="C:\node\AzureNodeChatClient\sourcecode\ChatRoom\WebRole1">
       <Bindings>
         <Binding name="Endpoint1" endpointName="Endpoint1" />
       </Bindings>
