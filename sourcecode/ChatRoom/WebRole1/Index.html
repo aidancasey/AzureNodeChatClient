@@ -19,6 +19,7 @@
 var output = document.getElementById("output");
 var socket = io.connect('http://localhost:4567'); 
  
+
  socket.on('news', function (data) {
      output.innerHTML = JSON.stringify(data);    
      socket.emit('my other event', { my: 'data' });  
@@ -38,6 +39,29 @@ var socket = io.connect('http://localhost:4567');
     });
 
 
+ socket.on('announcement', function(data){
+    var  msg = JSON.stringify(data);   
+      alert(msg);
+    });
+
+
+
+
+function sendNickName()
+{
+  try
+{
+  var nickName = 'Aidan Spacey';
+  socket.emit('nickname',nickName);
+
+}
+catch(err)
+
+{
+  alert(err.message);
+}
+
+}
 
 
 
@@ -60,6 +84,9 @@ try
  	   	
   	  	 // 	  	socket.send(msg,'message' );
          socket.emit('user message', msg);
+
+        sendNickName();
+
   	  	 // send the message
       	  	  //  appendMessage('You: ' + msg); // show the message
 

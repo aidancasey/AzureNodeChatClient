@@ -33,4 +33,27 @@ function handler (req, res) {
                     
     socket.on('my other event', function (data) {
                    console.log(data);  });
+
+
+// this bit to do with nick names....
+var nicknames = {};
+  socket.on('nickname', function (nick) {
+ 
+      nicknames[nick] = socket.nickname = nick;
+      socket.broadcast.emit('announcement', nick + ' connected');
+
+//hack broadcast sshould do this...
+      socket.emit('announcement', nick + ' connected');
+
+      io.sockets.emit('nicknames', nicknames);
+    
+  });
+
+
+
+
                  });
+
+
+
+
