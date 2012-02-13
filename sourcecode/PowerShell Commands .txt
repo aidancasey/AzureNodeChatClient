@@ -1,6 +1,21 @@
+
+HOME
+****
+
+
 cd C:\node\AzureNodeChatClient\sourcecode\ChatRoom\WebRole1
 node server.js
 
+Start-AzureEmulator -launch
 
 
+
+
+
+
+WORK
+****
+
+cd C:\Code\AzureNodeClient\sourcecode\ChatRoom\WebRole1
+node server.js
 Start-AzureEmulator -launch
