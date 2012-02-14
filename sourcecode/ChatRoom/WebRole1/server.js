@@ -40,10 +40,10 @@ var nicknames = {};
   socket.on('nickname', function (nick) {
  
       nicknames[nick] = socket.nickname = nick;
-      socket.broadcast.emit('announcement', nick + ' connected');
+      socket.broadcast.emit('announcement', nick + ' has joined' );
 
 //hack broadcast sshould do this...
-      socket.emit('announcement', nick + ' connected');
+      socket.emit('announcement', nick + ' has joined');
 
       io.sockets.emit('nicknames', nicknames);
     

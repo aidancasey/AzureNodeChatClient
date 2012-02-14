@@ -12,7 +12,7 @@
 
   <form method="post" action="" onsubmit="return false;" />
 
-<div id ="output"></div>
+
 
 <script>  
 
@@ -26,40 +26,28 @@ var socket = io.connect('http://localhost:4567');
      });
 
  socket.on('update', function(data){
-//  alert('message returned from server');
-          // when the client gets a message from the server, 
-          // add it to the buffer and display the message
-    //  buffer.push(message);
-    //  if(buffer.length > 15)
-    //    buffer.shift();
-  //  alert(data);
-  //  alert(JSON.stringify(data));
     var  msg = JSON.stringify(data);   
       appendMessage(msg);
     });
 
 
  socket.on('announcement', function(data){
-    var  msg = JSON.stringify(data);   
-      alert(msg);
+    var  msg = JSON.stringify(data);
+    appendMessage(msg);
     });
 
 
-
-
-function sendNickName()
-{
-  try
-{
-  var nickName = 'Aidan Spacey';
-  socket.emit('nickname',nickName);
-
-}
-catch(err)
-
-{
-  alert(err.message);
-}
+function Join() 
+  {
+      try {
+          
+        var nickName = $("input#nickname").val();
+        socket.emit('nickname', nickName);
+    }
+    catch (err) 
+    {
+        alert(err.message);
+    }
 
 }
 
@@ -76,19 +64,9 @@ function appendMessage(msg){
 try
 {
       var msg = $("input#message").val();
-        // alert('about to send :' + msg);
-
-
   	  	$("input#message").val('');
-  	   
- 	   	
-  	  	 // 	  	socket.send(msg,'message' );
          socket.emit('user message', msg);
-
-        sendNickName();
-
-  	  	 // send the message
-      	  	  //  appendMessage('You: ' + msg); // show the message
+     //  appendMessage('You: ' + msg); // show the message
 
 }
 catch(err)
@@ -100,13 +78,18 @@ catch(err)
  </script>
 
 
+ <div id="Login"> </div>
+ <input type="text" name="nickname" id="nickname" value="Enter Nick Nama" />
+  <input type="button" name="join" id="join" value="Join" onclick="Join();" />
+
+
     <div id="chat-box"></div>
 
     <input type="text" name="message" id="message" value="" />
     <input id="client" name="client" value="" type="hidden" />
     <input type="button" name="send" id="send" value="Send" onclick="sendMessage();" />
   
-
+  <div id ="output"></div>
   </form>
 </BODY>
 </HTML>
