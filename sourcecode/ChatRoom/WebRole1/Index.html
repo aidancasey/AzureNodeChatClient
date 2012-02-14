@@ -4,17 +4,14 @@
 <script src="/socket.io/socket.io.js"></script>
 <script  
      type="text/javascript"           
-     src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"> 
+     src="/socket.io/jquery.min.js"> 
 </script> 
 
 </HEAD>
 <BODY>
 
   <form method="post" action="" onsubmit="return false;" />
-
-
-
-<script>  
+<script type="text/javascript" >  
 
 var output = document.getElementById("output");
 var socket = io.connect('http://localhost:4567'); 
@@ -37,6 +34,11 @@ var socket = io.connect('http://localhost:4567');
     });
 
 
+socket.on('nicknames', function (data) {
+    var msg = JSON.stringify(data);
+    $('div#Login').append('<div>' + msg + '</div>'); 
+});
+
 function Join() 
   {
       try {
@@ -50,8 +52,6 @@ function Join()
     }
 
 }
-
-
 
 function appendMessage(msg){
       $('div#chat-box').append('<div>' + msg + '</div>'); 
@@ -70,7 +70,6 @@ try
 
 }
 catch(err)
-
 {
   alert(err.message);
 }
@@ -80,9 +79,13 @@ catch(err)
 
  <div id="Login"> </div>
  <input type="text" name="nickname" id="nickname" value="Enter Nick Nama" />
-  <input type="button" name="join" id="join" value="Join" onclick="Join();" />
 
+  <input type="button" name="join" id="join" value="Join" onclick="Join();" /><br/>
 
+  &nbsp;<div id="Users">Who's online:
+    </div>
+
+    <br/>
     <div id="chat-box"></div>
 
     <input type="text" name="message" id="message" value="" />
