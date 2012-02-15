@@ -19,7 +19,7 @@ Import-AzurePublishSettings C:\node\Aidan.publishsettings
 rename to 
 http://AidansChattyRoom.cloudapp.net:81
 
-Publish-AzureService –name AidansChattyRoom –location "North Central US” -launch
+Publish-AzureService –name AidansChattyRoom1 –location "North Central US” -launch
 
 
 WORK
