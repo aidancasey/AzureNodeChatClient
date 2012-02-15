@@ -18,9 +18,9 @@ function handler (req, res) {
 
                 io.sockets.on('connection', function (socket) {
                     console.log('in connect function socket...' + socket);
-                    socket.emit('news', { data: 'you are now connected' });
+                    socket.emit('update', { data: 'you are now connected' });
 
-                    socket.on('user message', function (data) {
+                   socket.on('user message', function (data) {
                         console.log('what it looks like');
                         console.log(data);
 

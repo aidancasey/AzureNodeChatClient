@@ -6,11 +6,20 @@ HOME
 cd C:\node\AzureNodeChatClient\sourcecode\ChatRoom\WebRole1
 node server.js
 
+
+cd C:\node\AzureNodeChatClient\sourcecode\ChatRoom\WebRole1
 Start-AzureEmulator -launch
 
 
+Azure deployment
+****************
 
+Import-AzurePublishSettings C:\node\Aidan.publishsettings
 
+rename to 
+http://AidansChattyRoom.cloudapp.net:81
+
+Publish-AzureService –name AidansChattyRoom –location "North Central US” -launch
 
 
 WORK
@@ -18,4 +27,4 @@ WORK
 
 cd C:\Code\AzureNodeClient\sourcecode\ChatRoom\WebRole1
 node server.js
-Start-AzureEmulator -launch
+Start-AzureEmulator -launch                                                                 

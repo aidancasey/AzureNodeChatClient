@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AidanSockets" generation="1" functional="0" release="0" Id="b23a0f17-61f6-450a-92dc-69d125664bae" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AidanSockets" generation="1" functional="0" release="0" Id="f952d068-656c-440c-a431-b779d41b1cd9" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="AidanSocketsGroup" generation="1" functional="0" release="0">
       <componentports>
@@ -57,9 +57,9 @@
     </group>
   </groups>
   <implements>
-    <implementation Id="a282b98a-18ff-4d93-9749-f66dc4fa9beb" ref="Microsoft.RedDog.Contract\ServiceContract\AidanSocketsContract@ServiceDefinition">
+    <implementation Id="06e45862-7be6-4a9e-84ed-9692d61d6de1" ref="Microsoft.RedDog.Contract\ServiceContract\AidanSocketsContract@ServiceDefinition">
       <interfacereferences>
-        <interfaceReference Id="dfabc1a7-c68f-4f91-aeb0-1c0714cff3da" ref="Microsoft.RedDog.Contract\Interface\WebRole1:Endpoint1@ServiceDefinition">
+        <interfaceReference Id="fff454d1-358f-4289-b7bc-0a515f9b0de3" ref="Microsoft.RedDog.Contract\Interface\WebRole1:Endpoint1@ServiceDefinition">
           <inPort>
             <inPortMoniker name="/AidanSockets/AidanSocketsGroup/WebRole1:Endpoint1" />
           </inPort>

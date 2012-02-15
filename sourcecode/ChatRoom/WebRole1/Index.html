@@ -2,10 +2,7 @@
 <HTML>
 <HEAD>
 <script src="/socket.io/socket.io.js"></script>
-<script  
-     type="text/javascript"           
-     src="/socket.io/jquery.min.js"> 
-</script> 
+<script type="text/javascript"  src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"> </script> 
 
 </HEAD>
 <BODY>
@@ -14,7 +11,10 @@
 <script type="text/javascript" >  
 
 var output = document.getElementById("output");
-var socket = io.connect('http://localhost:4567'); 
+
+
+var socket = io.connect('http://AidansChattyRoom.cloudapp.net:81'); 
+//var socket = io.connect('http://localhost:81'); 
  
 
  socket.on('news', function (data) {
@@ -26,7 +26,6 @@ var socket = io.connect('http://localhost:4567');
     var  msg = JSON.stringify(data);   
       appendMessage(msg);
     });
-
 
  socket.on('announcement', function(data){
     var  msg = JSON.stringify(data);
