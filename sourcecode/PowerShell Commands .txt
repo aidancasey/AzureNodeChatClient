@@ -21,6 +21,10 @@ http://AidansChattyRoom.cloudapp.net:81
 
 Publish-AzureService –name AidansChattyRoom1 –location "North Central US” -launch
 
+packages
+********
+npm install node-static
+
 
 WORK
 ****

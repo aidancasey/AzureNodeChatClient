@@ -1,20 +1,41 @@
 var app = require('http').createServer(handler)  
 , io = require('socket.io').listen(app)  
-, fs = require('fs')
+, fs = require('fs');
+
+var static = require('node-static');
+var file = new(static.Server)('./public');
+
+
 
 app.listen(process.env.port || 4567);
 
 function handler (req, res) {
-  fs.readFile(__dirname + '/index.html',
-    function (err, data) { 
-       if (err) {      res.writeHead(500);
-             return res.end('Error loading index.html');
-                 } 
+
+
+
+    req.addListener('end', function () {
+    //
+    // Serve static files!
+    //
+    file.serve(req, res);
+  });
+
+//sxtart
+  // fs.readFile(__dirname + '/index.html',
+  //   function (err, data) { 
+  //      if (err) {      res.writeHead(500);
+  //            return res.end('Error loading index.html');
+  //                } 
                  
-                    res.writeHead(200); 
-                       res.end(data); 
-                        });
-                }
+  //                   res.writeHead(200); 
+  //                      res.end(data); 
+  //                       });
+                
+  //               //end
+            }
+
+
+                
 
                 io.sockets.on('connection', function (socket) {
                     console.log('in connect function socket...' + socket);

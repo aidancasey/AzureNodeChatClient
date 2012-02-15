@@ -1,0 +1,108 @@
+<!doctype html>
+<HTML>
+<HEAD>
+<script src="/socket.io/socket.io.js"></script>
+
+<script type="text/javascript"  src="/scripts/jquery.min.js"> </script> 
+
+
+</HEAD>
+<BODY>
+
+  <form method="post" action="" onsubmit="return false;" />
+<script type="text/javascript" >  
+
+var output = document.getElementById("output");
+
+//http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js
+
+
+//cloud
+var socket = io.connect('http://AidansChattyRoom1.cloudapp.net'); 
+
+//node
+//var socket = io.connect('http://localhost:4567'); 
+
+
+//emulator
+//var socket = io.connect('http://localhost:81'); 
+ 
+
+ socket.on('news', function (data) {
+     output.innerHTML = JSON.stringify(data);    
+     socket.emit('my other event', { my: 'data' });  
+     });
+
+ socket.on('update', function(data){
+    var  msg = JSON.stringify(data);   
+      appendMessage(msg);
+    });
+
+ socket.on('announcement', function(data){
+    var  msg = JSON.stringify(data);
+    appendMessage(msg);
+    });
+
+
+socket.on('nicknames', function (data) {
+    var msg = JSON.stringify(data);
+    $('div#Login').append('<div>' + msg + '</div>'); 
+});
+
+function Join() 
+  {
+      try {
+          
+        var nickName = $("input#nickname").val();
+        socket.emit('nickname', nickName);
+    }
+    catch (err) 
+    {
+        alert(err.message);
+    }
+
+}
+
+function appendMessage(msg){
+      $('div#chat-box').append('<div>' + msg + '</div>'); 
+    }
+
+
+// send a message to the server
+    function sendMessage()
+    {
+try
+{
+      var msg = $("input#message").val();
+  	  	$("input#message").val('');
+         socket.emit('user message', msg);
+     //  appendMessage('You: ' + msg); // show the message
+
+}
+catch(err)
+{
+  alert(err.message);
+}
+  	  }
+ </script>
+
+
+ <div id="Login"> </div>
+ <input type="text" name="nickname" id="nickname" value="Enter Nick Nama" />
+
+  <input type="button" name="join" id="join" value="Join" onclick="Join();" /><br/>
+
+  &nbsp;<div id="Users">Who's online:
+    </div>
+
+    <br/>
+    <div id="chat-box"></div>
+
+    <input type="text" name="message" id="message" value="" />
+    <input id="client" name="client" value="" type="hidden" />
+    <input type="button" name="send" id="send" value="Send" onclick="sendMessage();" />
+  
+  <div id ="output"></div>
+  </form>
+</BODY>
+</HTML>
