@@ -2,6 +2,10 @@
   <head>
     <link rel="stylesheet" href="style.css" type="text/css"/>
     <script type='text/javascript' src='knockout-2.0.0.js'></script>
+    <script type='text/javascript'>
+
+        var myViewModel = {    personName: 'Bob',    personAge: 123};
+    </script>
     <title>node chat</title>
   </head>
   <body>
@@ -10,7 +14,7 @@
         <form action="#">
 
           <fieldset> 
-
+            The name is <span data-bind="text: personName"></span>
             <label for="nick">Name</label>
             <input id="nickInput" class="text"type="text" name="nick" value=""/>
             <input id="connectButton" class="button" type="submit" name="" value="Join"/>
@@ -40,4 +44,9 @@
         <input tabindex="1" type="text" id="entry"/>
       </div>
   </body>
+
+      <script type='text/javascript'>
+        var myViewModel = {    personName: 'Bob',    personAge: 123};
+        ko.applyBindings(myViewModel);
+    </script>
 </html>
