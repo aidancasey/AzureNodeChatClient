@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <script type='text/javascript' src='knockout-2.0.0.js'></script>
+    <title>node chat</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="connect">
+        <form action="#">
+
+          <fieldset> 
+
+            <label for="nick">Name</label>
+            <input id="nickInput" class="text"type="text" name="nick" value=""/>
+            <input id="connectButton" class="button" type="submit" name="" value="Join"/>
+
+          </fieldset>
+        </form>
+      </div>
+      <div id="log">
+        <table class="message"><tr><td class="date">18:58</td><td valign="top" class="nick">TTilus</td>
+         <td class="msg-text">x6a616e: i think you can, there was some weird #send trick to do that</td>
+        </tr></table>
+          <table class="message"><tr><td class="date">20:17</td><td valign="top" class="nick">bougyman</td>
+         <td class="msg-text">http://www.gnu.org/software/unrtf/unrtf.html</td>
+        </tr></table>
+        <table class="message"><tr><td class="date">20:20</td><td valign="top" class="nick">catalystmediastu</td>
+         <td class="msg-text">bougyman: Thanks, that looks like a good tool too. I'll look into them both a little 
+                                  more.
+         </td>
+        </tr></table>
+      </div>
+      <div id="toolbar">
+        <ul id="status">
+          <li><a id="usersLink" href="#">5 users</a></li>
+          <li>uptime: <span id="uptime">?</span></li>
+          <li>memory: <span id="rss">?</span>mb RSS</li>
+        </ul>
+        <input tabindex="1" type="text" id="entry"/>
+      </div>
+  </body>
+</html>

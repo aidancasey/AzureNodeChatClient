@@ -14,10 +14,9 @@ Start-AzureEmulator -launch
 Azure deployment
 ****************
 
-Import-AzurePublishSettings C:\node\Aidan.publishsettings
+cd C:\node\AzureNodeChatClient\sourcecode\ChatRoom\WebRole1
 
-rename to 
-http://AidansChattyRoom.cloudapp.net:81
+Import-AzurePublishSettings C:\node\Aidan.publishsettings
 
 Publish-AzureService –name AidansChattyRoom1 –location "North Central US” -launch
 
