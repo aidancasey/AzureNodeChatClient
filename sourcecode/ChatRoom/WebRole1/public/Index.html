@@ -5,45 +5,62 @@
 <script type="text/javascript"  src="/scripts/jquery.min.js"> </script> 
 <script type="text/javascript"  src="/scripts/knockout-2.0.0.js"> </script> 
 <link rel="stylesheet" href="/scripts/style.css" type="text/css"/>
+    <style type="text/css">
+        #message
+        {
+            width: 457px;
+            height: 85px;
+        }
+    </style>
 </HEAD>
 <BODY>
 
   <form method="post" action="" onsubmit="return false;" />
-<script type="text/javascript" >  
-
- </script>
-
- <div id="Login"> </div>
+ <div id="Login">
  <input type="text" name="nickname" id="nickname" value="Enter Nick Nama" />
 
   <input type="button" name="join" id="join" value="Join" onclick="Join();" /><br/>
+     
+     <div id="toolbar">
+        <ul id="status">
+          <li><a id="usersLink" href="#">5 users</a></li>
+          <li>uptime: <span id="uptime">?</span></li>
+          <li>memory: <span id="rss">?</span>mb RSS</li>
+        </ul>
+       
+      </div>
+
+       </div>
 
   &nbsp;<div id="Users">Who's online:
     </div>
 
     <br/>
     <div id="chat-box"></div>
-
-<table>
-    <thead>
-        <tr><th>date</th><th>user</th><th>message</th></tr>
-    </thead>
-    <tbody data-bind="foreach: people">
+    <div id="log">
+        <table class="message">
+         <thead>
+            <tr><th>date</th><th>user</th><th>message</th></tr>
+          </thead>
+            <tbody data-bind="foreach: people">
         <tr>
-            <td data-bind="text: date"></td>
-            <td data-bind="text: nick"></td>
-            <td data-bind="text: message"></td>           
+            <td data-bind="text: date" class="date" valign="top"></td>
+            <td data-bind="text: nick" class="nick" valign="top"></td>
+            <td data-bind="text: message" class="msg-text" valign="top"></td>           
         </tr>
     </tbody>
-</table>
+    </table>
+      </div>
 
-    <input type="text" name="message" id="message" value="" />
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+    <textarea  name="message" id="message" rows="2" cols="2">
+    </textarea>
+
     <input id="client" name="client" value="" type="hidden" />
     <input type="button" name="send" id="send" value="Send" onclick="sendMessage();" />
   
   <div id ="output"></div>
-
-  <button data-bind="click: addPerson">Add AN Item</button>
   </form>
 
 
@@ -57,10 +74,10 @@ var output = document.getElementById("output");
 
 
 //cloud
-var socket = io.connect('http://AidansChattyRoom2.cloudapp.net'); 
+//var socket = io.connect('http://AidansChattyRoom2.cloudapp.net'); 
 
 //node
-//var socket = io.connect('http://localhost:4567'); 
+var socket = io.connect('http://localhost:4567'); 
 
 
 //emulator
@@ -120,8 +137,8 @@ function appendMessage(msg){
     {
 try
 {
-      var msg = $("input#message").val();
-        $("input#message").val('');
+    var msg = $("textarea#message").val();
+    $("textarea#message").val('');
          socket.emit('user message', msg);
      //  appendMessage('You: ' + msg); // show the message
 

@@ -28,6 +28,8 @@ npm install node-static
 WORK
 ****
 
-cd C:\Code\AzureNodeClient\sourcecode\ChatRoom\WebRole1
+cd C:\Code\AzureNodeChatClient\sourcecode\ChatRoom\WebRole1
+
 node server.js
+
 Start-AzureEmulator -launch                                                                 
