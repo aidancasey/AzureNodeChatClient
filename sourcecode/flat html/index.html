@@ -4,7 +4,14 @@
     <script type='text/javascript' src='knockout-2.0.0.js'></script>
     <script type='text/javascript'>
 
-        var myViewModel = {    personName: 'Bob',    personAge: 123};
+        var myViewModel = { personName: 'Bob', personAge: 123 };
+
+        var people: {[
+            { firstName: 'Bert', lastName: 'Bertington' },
+            { firstName: 'Charles', lastName: 'Charlesforth' },
+            { firstName: 'Denise', lastName: 'Dentiste' }
+        ]};
+
     </script>
     <title>node chat</title>
   </head>
@@ -43,10 +50,39 @@
         </ul>
         <input tabindex="1" type="text" id="entry"/>
       </div>
-  </body>
+<script type="text/javascript">
+    function AppViewModel() {
+        var self = this;
 
-      <script type='text/javascript'>
-        var myViewModel = {    personName: 'Bob',    personAge: 123};
-        ko.applyBindings(myViewModel);
-    </script>
+        self.people = ko.observableArray([
+        { name: 'Bert' },
+        { name: 'Charles' },
+        { name: 'Denise' }
+    ]);
+
+        self.addPerson = function () {
+            self.people.push({ name: "New at " + new Date() });
+        };
+
+        self.removePerson = function () {
+            self.people.remove(this);
+        }
+    }
+
+    ko.applyBindings(new AppViewModel());
+
+</script>
+<ul data-bind="foreach: people">
+    <li>
+        Name: <span data-bind="text: name"> </span>
+    </li>
+</ul>
+
+
+<script>
+    ko.applyBindings(new AppViewModel());
+</script>
+ 
+
+  </body>
 </html>
