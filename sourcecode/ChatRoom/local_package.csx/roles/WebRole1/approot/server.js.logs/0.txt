@@ -1,28 +1,83 @@
    [36minfo  -[39m socket.io started
    [90mdebug -[39m served static content /socket.io.js
    [90mdebug -[39m client authorized
-   [36minfo  -[39m handshake authorized 33737890400356917
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/33737890400356917?t=1329295706630
+   [36minfo  -[39m handshake authorized 10788195961096521398
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10788195961096521398?t=1329739317863
    [90mdebug -[39m setting poll timeout
    [90mdebug -[39m client authorized for 
    [90mdebug -[39m clearing poll timeout
    [90mdebug -[39m xhr-polling writing 1::
-   [90mdebug -[39m set close timeout for client 33737890400356917
+   [90mdebug -[39m set close timeout for client 10788195961096521398
 in connect function socket...[object Object]
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/33737890400356917?t=1329295706730
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10788195961096521398?t=1329739317877
    [90mdebug -[39m setting poll timeout
    [90mdebug -[39m clearing poll timeout
    [90mdebug -[39m xhr-polling writing 5:::{"name":"update","args":[{"data":"you are now connected"}]}
-   [90mdebug -[39m set close timeout for client 33737890400356917
+   [90mdebug -[39m set close timeout for client 10788195961096521398
    [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 33737890400356917
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/33737890400356917?t=1329295706746
+   [90mdebug -[39m cleared close timeout for client 10788195961096521398
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10788195961096521398?t=1329739317899
    [90mdebug -[39m setting poll timeout
    [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 33737890400356917
+   [90mdebug -[39m cleared close timeout for client 10788195961096521398
    [90mdebug -[39m xhr-polling received data packet 5:::{"name":"nickname","args":["Enter Nick Nama"]}
-   [90mdebug -[39m xhr-polling received data packet 5:::{"name":"user message","args":[""]}
+   [90mdebug -[39m broadcasting packet
+   [90mdebug -[39m clearing poll timeout
+   [90mdebug -[39m xhr-polling writing 5:::{"name":"announcement","args":[{"message":"Enter Nick Nama has joined","nick":"Enter Nick Nama"}]}
+   [90mdebug -[39m set close timeout for client 10788195961096521398
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10788195961096521398?t=1329739324670
+   [90mdebug -[39m setting poll timeout
+   [90mdebug -[39m clearing poll timeout
+   [90mdebug -[39m xhr-polling writing 5:::{"name":"nicknames","args":[{"Enter Nick Nama":"Enter Nick Nama"}]}
+   [90mdebug -[39m set close timeout for client 10788195961096521398
+   [90mdebug -[39m discarding transport
+   [90mdebug -[39m cleared close timeout for client 10788195961096521398
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10788195961096521398?t=1329739324695
+   [90mdebug -[39m setting poll timeout
+   [90mdebug -[39m discarding transport
+   [90mdebug -[39m cleared close timeout for client 10788195961096521398
+   [90mdebug -[39m xhr-polling received data packet 5:::{"name":"user message","args":["test"]}
+what it looks like
+test
+   [90mdebug -[39m clearing poll timeout
+   [90mdebug -[39m xhr-polling writing 5:::{"name":"update","args":[{"message":"test","nick":"socket.nickname","date":"2012-02-20T12:02:11.364Z"}]}
+   [90mdebug -[39m set close timeout for client 10788195961096521398
+   [90mdebug -[39m broadcasting packet
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10788195961096521398?t=1329739331384
+   [90mdebug -[39m setting poll timeout
+   [90mdebug -[39m discarding transport
+   [90mdebug -[39m cleared close timeout for client 10788195961096521398
+   [90mdebug -[39m xhr-polling received data packet 5:::{"name":"user message","args":["scassc"]}
+what it looks like
+scassc
+   [90mdebug -[39m clearing poll timeout
+   [90mdebug -[39m xhr-polling writing 5:::{"name":"update","args":[{"message":"scassc","nick":"socket.nickname","date":"2012-02-20T12:02:15.138Z"}]}
+   [90mdebug -[39m set close timeout for client 10788195961096521398
+   [90mdebug -[39m broadcasting packet
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10788195961096521398?t=1329739335153
+   [90mdebug -[39m setting poll timeout
+   [90mdebug -[39m discarding transport
+   [90mdebug -[39m cleared close timeout for client 10788195961096521398
+   [90mdebug -[39m xhr-polling received data packet 5:::{"name":"nickname","args":["Enter Nick Nama"]}
+   [90mdebug -[39m broadcasting packet
+   [90mdebug -[39m clearing poll timeout
+   [90mdebug -[39m xhr-polling writing 5:::{"name":"announcement","args":[{"message":"Enter Nick Nama has joined","nick":"Enter Nick Nama"}]}
+   [90mdebug -[39m set close timeout for client 10788195961096521398
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10788195961096521398?t=1329739337670
+   [90mdebug -[39m setting poll timeout
+   [90mdebug -[39m clearing poll timeout
+   [90mdebug -[39m xhr-polling writing 5:::{"name":"nicknames","args":[{"Enter Nick Nama":"Enter Nick Nama"}]}
+   [90mdebug -[39m set close timeout for client 10788195961096521398
+   [90mdebug -[39m discarding transport
+   [90mdebug -[39m cleared close timeout for client 10788195961096521398
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10788195961096521398?t=1329739337737
+   [90mdebug -[39m setting poll timeout
+   [90mdebug -[39m discarding transport
+   [90mdebug -[39m cleared close timeout for client 10788195961096521398
    [90mdebug -[39m clearing poll timeout
    [90mdebug -[39m xhr-polling writing 8::
-   [90mdebug -[39m set close timeout for client 33737890400356917
+   [90mdebug -[39m set close timeout for client 10788195961096521398
    [90mdebug -[39m xhr-polling closed due to exceeded duration
+   [90mdebug -[39m fired close timeout for client 10788195961096521398
+   [36minfo  -[39m transport end
+   [90mdebug -[39m discarding transport

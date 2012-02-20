@@ -2,15 +2,54 @@
 <HTML>
 <HEAD>
 <script src="/socket.io/socket.io.js"></script>
-
 <script type="text/javascript"  src="/scripts/jquery.min.js"> </script> 
-
-
+<script type="text/javascript"  src="/scripts/knockout-2.0.0.js"> </script> 
+<link rel="stylesheet" href="/scripts/style.css" type="text/css"/>
 </HEAD>
 <BODY>
 
   <form method="post" action="" onsubmit="return false;" />
 <script type="text/javascript" >  
+
+ </script>
+
+ <div id="Login"> </div>
+ <input type="text" name="nickname" id="nickname" value="Enter Nick Nama" />
+
+  <input type="button" name="join" id="join" value="Join" onclick="Join();" /><br/>
+
+  &nbsp;<div id="Users">Who's online:
+    </div>
+
+    <br/>
+    <div id="chat-box"></div>
+
+<table>
+    <thead>
+        <tr><th>date</th><th>user</th><th>message</th></tr>
+    </thead>
+    <tbody data-bind="foreach: people">
+        <tr>
+            <td data-bind="text: date"></td>
+            <td data-bind="text: nick"></td>
+            <td data-bind="text: message"></td>           
+        </tr>
+    </tbody>
+</table>
+
+    <input type="text" name="message" id="message" value="" />
+    <input id="client" name="client" value="" type="hidden" />
+    <input type="button" name="send" id="send" value="Send" onclick="sendMessage();" />
+  
+  <div id ="output"></div>
+
+  <button data-bind="click: addPerson">Add AN Item</button>
+  </form>
+
+
+      <script type='text/javascript'>
+
+var model = new ChatViewModel();
 
 var output = document.getElementById("output");
 
@@ -18,7 +57,7 @@ var output = document.getElementById("output");
 
 
 //cloud
-var socket = io.connect('http://AidansChattyRoom1.cloudapp.net'); 
+var socket = io.connect('http://AidansChattyRoom2.cloudapp.net'); 
 
 //node
 //var socket = io.connect('http://localhost:4567'); 
@@ -34,13 +73,21 @@ var socket = io.connect('http://AidansChattyRoom1.cloudapp.net');
      });
 
  socket.on('update', function(data){
-    var  msg = JSON.stringify(data);   
-      appendMessage(msg);
+
+
+//    var  msg = JSON.stringify(data);   
+  //    appendMessage(msg);
+     //     alert(data.message);
+
+    model.people.push({ date: data.date, nick: data.nick, message: data.message });
+
+  
     });
 
  socket.on('announcement', function(data){
-    var  msg = JSON.stringify(data);
-    appendMessage(msg);
+//    var  msg = JSON.stringify(data);
+//    appendMessage(msg);
+    model.people.push({ date: data.date, nick: data.nick, message: data.message });
     });
 
 
@@ -74,7 +121,7 @@ function appendMessage(msg){
 try
 {
       var msg = $("input#message").val();
-  	  	$("input#message").val('');
+        $("input#message").val('');
          socket.emit('user message', msg);
      //  appendMessage('You: ' + msg); // show the message
 
@@ -83,26 +130,31 @@ catch(err)
 {
   alert(err.message);
 }
-  	  }
- </script>
+      }
 
 
- <div id="Login"> </div>
- <input type="text" name="nickname" id="nickname" value="Enter Nick Nama" />
 
-  <input type="button" name="join" id="join" value="Join" onclick="Join();" /><br/>
+    function ChatViewModel() {
+        var self = this;
 
-  &nbsp;<div id="Users">Who's online:
-    </div>
+self.people = ko.observableArray();
+    //     self.people = ko.observableArray([
+    //     { date:'10:00am', nick: 'Bert' ,message :'Message 1' },
+    //     { date: '11:00am', nick: 'Charles', message: 'Message 2' },
+    //     { date: '10:45am', nick: 'Denise', message: 'Message 1' }
+    // ]);
 
-    <br/>
-    <div id="chat-box"></div>
+        // self.addPerson = function () {
+        //     self.people.push({ date: '10:45am', nick: 'new un !!!', message: 'Message 12' });
+        // };
 
-    <input type="text" name="message" id="message" value="" />
-    <input id="client" name="client" value="" type="hidden" />
-    <input type="button" name="send" id="send" value="Send" onclick="sendMessage();" />
-  
-  <div id ="output"></div>
-  </form>
+        // self.removePerson = function () {
+        //     self.people.remove(this);
+        // }
+    }
+
+    ko.applyBindings(model);
+
+</script>
 </BODY>
 </HTML>

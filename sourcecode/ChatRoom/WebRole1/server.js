@@ -42,14 +42,18 @@ function handler (req, res) {
                     socket.emit('update', { data: 'you are now connected' });
 
                    socket.on('user message', function (data) {
+
+                      var currentDate = new Date();
+
+
                         console.log('what it looks like');
                         console.log(data);
 
                         //back to self
-                        socket.emit('update', { message: data, nick: socket.nickname });
+                        socket.emit('update', { message: data, nick: 'socket.nickname', date : currentDate });
 
                         //send to everyone
-                        socket.broadcast.emit('update', { message: data, nick: socket.nickname });
+                        socket.broadcast.emit('update', { message: data, nick: 'socket.nickname' , date : currentDate});
                     });
 
                     socket.on('my other event', function (data) {
