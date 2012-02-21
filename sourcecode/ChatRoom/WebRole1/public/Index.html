@@ -16,21 +16,13 @@
 <BODY>
 
   <form method="post" action="" onsubmit="return false;" />
- <div id="Login">
- <input type="text" name="nickname" id="nickname" value="Enter Nick Nama" />
+  <input type="text" name="nickname" id="nickname" value="Enter Nick Nama" />
 
   <input type="button" name="join" id="join" value="Join" onclick="Join();" /><br/>
      
-     <div id="toolbar">
-        <ul id="status">
-          <li><a id="usersLink" href="#">5 users</a></li>
-          <li>uptime: <span id="uptime">?</span></li>
-          <li>memory: <span id="rss">?</span>mb RSS</li>
-        </ul>
-       
-      </div>
+     <table>
 
-       </div>
+     </table>
 
   &nbsp;<div id="Users">Who's online:
     </div>
@@ -59,14 +51,21 @@
 
     <input id="client" name="client" value="" type="hidden" />
     <input type="button" name="send" id="send" value="Send" onclick="sendMessage();" />
-  
-  <div id ="output"></div>
+     
+     <div id="toolbar1">
+     <table id="toolbar" class="toolbar">
+     <tr>
+     <td class="testclass">0 Users Online</td>
+     </tr>
+     </table>
+     </div>
+       <div id ="output"></div>
   </form>
 
 
       <script type='text/javascript'>
 
-var model = new ChatViewModel();
+          var model = new ChatViewModel();
 
 var output = document.getElementById("output");
 
@@ -108,10 +107,12 @@ var socket = io.connect('http://localhost:4567');
     });
 
 
-socket.on('nicknames', function (data) {
-    var msg = JSON.stringify(data);
-    $('div#Login').append('<div>' + msg + '</div>'); 
-});
+    socket.on('nicknames', function (data) {
+        alert('test');
+        var msg = JSON.stringify(data);
+     //   $(".testclass td:first").text("foo");
+        $('.testclass').each().text("foo");
+    });
 
 function Join() 
   {
@@ -149,28 +150,15 @@ catch(err)
 }
       }
 
-
-
-    function ChatViewModel() {
+      function ChatViewModel() 
+            {
         var self = this;
+        self.people = ko.observableArray();
+            }
 
-self.people = ko.observableArray();
-    //     self.people = ko.observableArray([
-    //     { date:'10:00am', nick: 'Bert' ,message :'Message 1' },
-    //     { date: '11:00am', nick: 'Charles', message: 'Message 2' },
-    //     { date: '10:45am', nick: 'Denise', message: 'Message 1' }
-    // ]);
-
-        // self.addPerson = function () {
-        //     self.people.push({ date: '10:45am', nick: 'new un !!!', message: 'Message 12' });
-        // };
-
-        // self.removePerson = function () {
-        //     self.people.remove(this);
-        // }
-    }
 
     ko.applyBindings(model);
+  
 
 </script>
 </BODY>
