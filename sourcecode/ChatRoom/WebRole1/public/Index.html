@@ -54,18 +54,28 @@
      
      <div id="toolbar1">
      <table id="toolbar" class="toolbar">
-     <tr>
-     <td class="testclass">0 Users Online</td>
-     </tr>
+<tbody >
+        <tr >
+            <td  valign="top">           
+           Users online : <div data-bind="template: { name: 'nickname-template', foreach: nicknames }"></div> 
+            </td>
+        </tr>
      </table>
      </div>
        <div id ="output"></div>
+
+       <script type="text/html" id="nickname-template">    
+          
+       <span data-bind="text: nick">
+       </span>
+       </script>
+
   </form>
 
 
       <script type='text/javascript'>
 
-          var model = new ChatViewModel();
+          var model = new ViewModel();
 
 var output = document.getElementById("output");
 
@@ -108,10 +118,10 @@ var socket = io.connect('http://localhost:4567');
 
 
     socket.on('nicknames', function (data) {
-        alert('test');
+     //   alert('test');
         var msg = JSON.stringify(data);
      //   $(".testclass td:first").text("foo");
-        $('.testclass').each().text("foo");
+     //   $('.testclass').each().text("foo");
     });
 
 function Join() 
@@ -150,10 +160,11 @@ catch(err)
 }
       }
 
-      function ChatViewModel() 
+      function ViewModel() 
             {
         var self = this;
         self.people = ko.observableArray();
+        self.nicknames = ko.observableArray([    { nick: "User `1"},    { nick: "George"}]);
             }
 
 
