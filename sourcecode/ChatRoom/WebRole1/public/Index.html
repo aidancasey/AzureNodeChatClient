@@ -17,16 +17,8 @@
 
   <form method="post" action="" onsubmit="return false;" />
   <input type="text" name="nickname" id="nickname" value="Enter Nick Nama" />
-
   <input type="button" name="join" id="join" value="Join" onclick="Join();" /><br/>
      
-     <table>
-
-     </table>
-
-  &nbsp;<div id="Users">Who's online:
-    </div>
-
     <br/>
     <div id="chat-box"></div>
     <div id="log">
@@ -56,8 +48,8 @@
      <table id="toolbar" class="toolbar">
 <tbody >
         <tr >
-            <td  valign="top">           
-           Users online : <div data-bind="template: { name: 'nickname-template', foreach: nicknames }"></div> 
+            <td valign="top">           
+            <div data-bind="template: { name: 'nickname-template', foreach: nicknames }"></div> 
             </td>
         </tr>
      </table>
@@ -66,7 +58,7 @@
 
        <script type="text/html" id="nickname-template">    
           
-       <span data-bind="text: nick">
+       <span data-bind="text: name">
        </span>
        </script>
 
@@ -78,8 +70,6 @@
           var model = new ViewModel();
 
 var output = document.getElementById("output");
-
-//http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js
 
 
 //cloud
@@ -100,28 +90,25 @@ var socket = io.connect('http://localhost:4567');
 
  socket.on('update', function(data){
 
-
-//    var  msg = JSON.stringify(data);   
-  //    appendMessage(msg);
-     //     alert(data.message);
-
     model.people.push({ date: data.date, nick: data.nick, message: data.message });
-
   
     });
 
  socket.on('announcement', function(data){
-//    var  msg = JSON.stringify(data);
-//    appendMessage(msg);
+
     model.people.push({ date: data.date, nick: data.nick, message: data.message });
     });
 
 
     socket.on('nicknames', function (data) {
-     //   alert('test');
-        var msg = JSON.stringify(data);
-     //   $(".testclass td:first").text("foo");
-     //   $('.testclass').each().text("foo");
+
+        //var msg = JSON.stringify(data);
+        model.nicknames.removeAll();
+         
+        for (var i = 0; i < data.length; i++) { 
+            var item = (data[i]); 
+             model.nicknames.push({name:item.name});
+          } 
     });
 
 function Join() 
@@ -137,10 +124,6 @@ function Join()
     }
 
 }
-
-function appendMessage(msg){
-      $('div#chat-box').append('<div>' + msg + '</div>'); 
-    }
 
 
 // send a message to the server
@@ -164,13 +147,11 @@ catch(err)
             {
         var self = this;
         self.people = ko.observableArray();
-        self.nicknames = ko.observableArray([    { nick: "User `1"},    { nick: "George"}]);
+        self.nicknames = ko.observableArray();
             }
-
 
     ko.applyBindings(model);
   
-
 </script>
 </BODY>
 </HTML>

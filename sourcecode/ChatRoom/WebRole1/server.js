@@ -62,8 +62,13 @@ function handler (req, res) {
 
 
                     // this bit to do with nick names....
-                    var nicknames = {};
+                    var nicknames = new Array();
+
                     socket.on('nickname', function (nick) {
+
+
+                    nicknames.push({name: nick});
+
 
                         nicknames[nick] = socket.nickname = nick;
                         socket.broadcast.emit('announcement', { message: nick + ' has joined', nick: socket.nickname });
