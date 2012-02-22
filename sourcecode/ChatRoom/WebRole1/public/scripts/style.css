@@ -10,6 +10,7 @@ body, table {
   font-family: DejaVu Sans Mono, fixed; 
   font-size: 14pt;
   line-height: 150%;
+  font-size:medium;
 }
 tr,td,table {
   padding: 0;
@@ -83,11 +84,12 @@ a:hover { text-decoration: underline; color: #aaa; }
 }
 
 .message td {
+    font-weight: bold;
   vertical-align: top;
 }
 
 .nick { 
-  font-weight: bold;
+  color :yellow;
   padding: 0 1em 0 0.5em;
 }
 
