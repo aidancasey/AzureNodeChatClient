@@ -24,14 +24,15 @@ io.sockets.on('connection', function (socket) {
 
 
       socket.on('user message', function (data) {
-                var currentDate = new Date();
+
+
 
                  console.log(data);
 
                  //back to self
-                 socket.emit('update', { message: data, nick: 'socket.nickname', date : currentDate });
+                 socket.emit('update', { message: data, nick: 'socket.nickname', date : CurrentDateAndTime() });
                  //send to everyone
-                 socket.broadcast.emit('update', { message: data, nick: 'socket.nickname' , date : currentDate});
+                 socket.broadcast.emit('update', { message: data, nick: 'socket.nickname' , date : CurrentDateAndTime()});
                  }
                );
 
@@ -43,9 +44,9 @@ io.sockets.on('connection', function (socket) {
       socket.on('nickname', function (nick) {
                 nicknames.push({name: nick});
                 nicknames[nick] = socket.nickname = nick;
-                socket.broadcast.emit('announcement', { message: nick + ' has joined', nick: socket.nickname });
+                socket.broadcast.emit('announcement', { message: nick + ' has joined', nick: socket.nickname, date : CurrentDateAndTime() });
                 //hack broadcast sshould do this...
-                socket.emit('announcement', { message: nick + ' has joined', nick: socket.nickname });
+                socket.emit('announcement', { message: nick + ' has joined', nick: socket.nickname, date : CurrentDateAndTime() });
                 io.sockets.emit('nicknames', nicknames);
                     }
                 );
@@ -53,6 +54,34 @@ io.sockets.on('connection', function (socket) {
                 }
               );
 
+function CurrentDateAndTime()
+{
+var currentTime = new Date();
+var month = currentTime.getMonth() + 1;
+if (month < 10){
+  month = "0" + month;
+}
 
+var day = currentTime.getDate()
+if (day < 10){
+  day = "0" + day;
+}
+
+var year = currentTime.getFullYear()
+
+var hours = currentTime.getHours();
+
+var minutes = currentTime.getMinutes();
+if (minutes < 10){
+  minutes = "0" + minutes;
+}
+var seconds = currentTime.getSeconds();
+if (seconds < 10){
+  seconds = "0" + seconds;
+}
+
+  var now =  day + '/' + month + '/' + year + '   :' +  hours + ':' + minutes + ':' + seconds;
+return now;  
+}
 
 

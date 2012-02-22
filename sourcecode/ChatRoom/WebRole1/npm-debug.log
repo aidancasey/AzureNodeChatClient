@@ -1,0 +1,51 @@
+info it worked if it ends with ok
+verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+verbose cli   'install',
+verbose cli   'node-dateformat' ]
+info using npm@1.1.0-2
+info using node@v0.6.8
+verbose config file C:\Users\AIDAN\.npmrc
+verbose config file C:\Program Files\nodejs\etc\npmrc
+verbose config file C:\Program Files\nodejs\node_modules\npm\npmrc
+verbose mkdir done: C:\Users\AIDAN\AppData\Roaming\npm 755
+verbose mkdir done: C:\node\AzureNodeChatClient\sourcecode\ChatRoom\WebRole1 755
+WARN node-static@0.5.9 dependencies field should be hash of <name>:<version-range> pairs
+verbose caching C:\node\AzureNodeChatClient\sourcecode\ChatRoom\WebRole1\node_modules\node-static\package.json
+verbose loadDefaults node-static@0.5.9
+verbose caching C:\node\AzureNodeChatClient\sourcecode\ChatRoom\WebRole1\node_modules\socket.io\package.json
+verbose loadDefaults socket.io@0.8.7
+verbose cache add [ 'node-dateformat', null ]
+silly cache add: name, spec, args [ undefined, 'node-dateformat', [ 'node-dateformat', null ] ]
+verbose parsed url { pathname: 'node-dateformat',
+verbose parsed url   path: 'node-dateformat',
+verbose parsed url   href: 'node-dateformat' }
+verbose addNamed [ 'node-dateformat', '' ]
+verbose addNamed [ null, '' ]
+silly name, range, hasData [ 'node-dateformat', '', false ]
+verbose raw, before any munging node-dateformat
+verbose url resolving [ 'https://registry.npmjs.org/', './node-dateformat' ]
+verbose url resolved https://registry.npmjs.org/node-dateformat
+http GET https://registry.npmjs.org/node-dateformat
+http 404 https://registry.npmjs.org/node-dateformat
+silly get cb [ 404,
+silly get cb   { server: 'CouchDB/1.1.0 (Erlang OTP/R14B04)',
+silly get cb     date: 'Wed, 22 Feb 2012 08:56:40 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '52',
+silly get cb     'cache-control': 'must-revalidate' } ]
+ERR! 404 'node-dateformat' is not in the npm registry.
+ERR! 404 You should bug the author to publish it
+ERR! 404 Maybe try 'npm search dateformat'
+ERR! 404 Note that you can also install from a
+ERR! 404 tarball, folder, or http url, or git url.
+ERR! 
+ERR! System Windows_NT 6.1.7601
+ERR! command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "node-dateformat"
+ERR! cwd C:\node\AzureNodeChatClient\sourcecode\ChatRoom\WebRole1
+ERR! node -v v0.6.8
+ERR! npm -v 1.1.0-2
+ERR! code E404
+ERR! message 404 Not Found: node-dateformat
+ERR! errno {}
+verbose exit [ 1, true ]
