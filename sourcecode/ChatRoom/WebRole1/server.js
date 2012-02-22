@@ -44,9 +44,9 @@ io.sockets.on('connection', function (socket) {
       socket.on('nickname', function (nick) {
                 nicknames.push({name: nick});
                 nicknames[nick] = socket.nickname = nick;
-                socket.broadcast.emit('announcement', { message: nick + ' has joined', nick: socket.nickname, date : CurrentDateAndTime() });
+                socket.broadcast.emit('announcement', { message: nick + ' has joined!',  date : CurrentDateAndTime() });
                 //hack broadcast sshould do this...
-                socket.emit('announcement', { message: nick + ' has joined', nick: socket.nickname, date : CurrentDateAndTime() });
+                socket.emit('announcement', { message: nick + ' has joined !', date : CurrentDateAndTime() });
                 io.sockets.emit('nicknames', nicknames);
                     }
                 );
