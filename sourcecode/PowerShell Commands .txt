@@ -18,7 +18,7 @@ cd C:\node\AzureNodeChatClient\sourcecode\ChatRoom\WebRole1
 
 Import-AzurePublishSettings C:\node\Aidan.publishsettings
 
-Publish-AzureService –name AidansChattyRoom1 –location "North Central US” -launch
+Publish-AzureService –name AidansChattyRoom3 –location "North Central US” -launch
 
 packages
 ********
