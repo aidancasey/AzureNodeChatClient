@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AidansChattyRoom3" generation="1" functional="0" release="0" Id="27eb6ad6-e658-4457-83d1-b5d590891eb6" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AidansChattyRoom3" generation="1" functional="0" release="0" Id="5109c2f0-39cc-4e7f-b846-01844627f133" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="AidansChattyRoom3Group" generation="1" functional="0" release="0">
       <componentports>
@@ -57,9 +57,9 @@
     </group>
   </groups>
   <implements>
-    <implementation Id="c1b62588-85e6-4360-9593-f22af0a6ef9c" ref="Microsoft.RedDog.Contract\ServiceContract\AidansChattyRoom3Contract@ServiceDefinition">
+    <implementation Id="0b89aabb-4e8a-454f-a6c3-e2e598cf46fa" ref="Microsoft.RedDog.Contract\ServiceContract\AidansChattyRoom3Contract@ServiceDefinition">
       <interfacereferences>
-        <interfaceReference Id="5dc19c93-48fc-4a7a-97cd-302220f08eac" ref="Microsoft.RedDog.Contract\Interface\WebRole1:Endpoint1@ServiceDefinition">
+        <interfaceReference Id="503e80fb-50af-43e2-bf40-fd631f561488" ref="Microsoft.RedDog.Contract\Interface\WebRole1:Endpoint1@ServiceDefinition">
           <inPort>
             <inPortMoniker name="/AidansChattyRoom3/AidansChattyRoom3Group/WebRole1:Endpoint1" />
           </inPort>
