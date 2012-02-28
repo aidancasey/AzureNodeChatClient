@@ -10,6 +10,7 @@ body, table {
   font-family: DejaVu Sans Mono, fixed; 
   font-size: 14pt;
   line-height: 150%;
+  font-size:medium;
 }
 tr,td,table {
   padding: 0;
@@ -46,11 +47,13 @@ a:hover { text-decoration: underline; color: #aaa; }
 }
 
 #toolbar {
-  position: fixed;
+  /*position: fixed;*/
+  /*color: #fff; */
   color: #fff;
   width: 100%; 
   bottom: 0;
-  background: #733;
+  background :#FF7171;
+  /*background: #733; */
 }
 
 #entry {
@@ -81,11 +84,12 @@ a:hover { text-decoration: underline; color: #aaa; }
 }
 
 .message td {
+    font-weight: bold;
   vertical-align: top;
 }
 
 .nick { 
-  font-weight: bold;
+  color :yellow;
   padding: 0 1em 0 0.5em;
 }
 
@@ -93,18 +97,32 @@ a:hover { text-decoration: underline; color: #aaa; }
   color: inherit;
 }
 
+.toolbar table
+{
+    background :#FF7171;
+    width: 70%;
+
+}
+
 #toolbar ul {
   margin: 0;
   padding: 0;
   list-style: none;
+   background :#FF7171;
+    width: 100%;
+
 }
 
 #toolbar li {
   display: block; 
   float: left;
   margin: 0 2em 0 0;
+  background :#FF7171;
 }
 
 #usersLink {
+  width:100%;
   color: inherit;
+  background :#FF7171;
 }
+

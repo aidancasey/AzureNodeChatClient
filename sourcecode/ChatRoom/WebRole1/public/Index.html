@@ -25,7 +25,7 @@
         <table class="message">
          <thead>
           </thead>
-            <tbody data-bind="foreach: people">
+            <tbody data-bind="foreach: message">
         <tr>
             <td data-bind="text: date" class="date" valign="top"></td>
             <td data-bind="text: nick" class="nick" valign="top"></td>
@@ -68,22 +68,22 @@
 //var socket = io.connect('http://AidansChattyRoom3.cloudapp.net'); 
 
 //node
-var socket = io.connect('http://localhost:4567'); 
+//var socket = io.connect('http://localhost:4567'); 
 
 
 //emulator
-//var socket = io.connect('http://localhost:81'); 
+var socket = io.connect('http://localhost:81'); 
  
 
  socket.on('update', function(data){
 
-    model.people.push({ date: data.date, nick: data.nick, message: data.message });
+    model.message.push({ date: data.date, nick: data.nick, message: data.message });
   
     });
 
  socket.on('announcement', function(data){
 
-    model.people.push({ date: data.date, nick: data.nick, message: data.message });
+    model.message.push({ date: data.date, nick: data.nick, message: data.message });
     });
 
 socket.on('nicknames', function (data) {
@@ -132,7 +132,7 @@ catch(err)
       function ViewModel() 
             {
         var self = this;
-        self.people = ko.observableArray();
+        self.message = ko.observableArray();
         self.nicknames = ko.observableArray();
             }
 
