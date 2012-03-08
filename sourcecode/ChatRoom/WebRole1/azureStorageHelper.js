@@ -3,8 +3,6 @@ var azure = require('azure');
 //to generate GUIDs
 var uuid = require('node-uuid');
 
-
-
 function LogEntry()
 {
 var tableService = azure.createTableService();
@@ -30,11 +28,7 @@ tableService.insertEntity('tasktable', task1, function(error){
     }
 });
 
-
-
 }
-
-
 
 exports.LogEntry = LogEntry;
 
