@@ -1,4 +1,7 @@
-var app = require('http').createServer(handler);
+
+var app = require('http').createServer(httpHandler);
+app.listen(process.env.port || 4567);
+
   
 var io = require('socket.io').listen(app);  
 var fs = require('fs');
@@ -8,17 +11,14 @@ var azureStorageHelper = require("./azureStorageHelper");
 var static = require('node-static');
 var file = new(static.Server)('./public');
 
-app.listen(process.env.port || 4567);
 
-function handler (req, res) {
+function httpHandler (req, res) {
     req.addListener('end', function () {
 
     // Serve static files!
     file.serve(req, res);
   });
 }
-
-//is this the best way to persist stuff serverside ??
 
 var nicknames = new Array();
       
@@ -29,26 +29,14 @@ io.sockets.on('connection', function (socket)
 
 
               socket.on('user message', function (data) {
-
-
-
-                         console.log(data);
-
                          //back to self
                          socket.emit('update', { message: data, nick: 'socket.nickname', date : dateHelper.CurrentDateAndTime() });
                          //send to everyone
                          socket.broadcast.emit('update', { message: data, nick: 'socket.nickname' , date : dateHelper.CurrentDateAndTime()});
-
                          //how do I asynchronously log to azure storage here
-                      azureStorageHelper.LogEntry();
-
+                         azureStorageHelper.LogEntry();
                          }
                        );
-
-              socket.on('my other event', function (data) {
-                          console.log(data);
-                          }
-                        );
 
               socket.on('nickname', function (nick) {
                         nicknames.push({name: nick});
