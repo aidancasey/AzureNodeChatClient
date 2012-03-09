@@ -1,315 +1,33 @@
    [36minfo  -[39m socket.io started
-   [90mdebug -[39m served static content /socket.io.js
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/9472725661990720143?t=1331287152076
+   [90mdebug -[39m setting poll timeout
+   [90mdebug -[39m clearing poll timeout
+   [90mdebug -[39m xhr-polling writing 7:::1+0
+   [90mdebug -[39m set close timeout for client 9472725661990720143
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [36minfo  -[39m transport end
+   [90mdebug -[39m cleared close timeout for client 9472725661990720143
+   [90mdebug -[39m discarding transport
+   [90mdebug -[39m discarding transport
+   [90mdebug -[39m xhr-polling received data packet 0::
+   [90mdebug -[39m got disconnection packet
    [90mdebug -[39m client authorized
-   [36minfo  -[39m handshake authorized 10279365891249591827
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429298262
+   [36minfo  -[39m handshake authorized 1012994566257599923
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/1012994566257599923?t=1331287154643
    [90mdebug -[39m setting poll timeout
    [90mdebug -[39m client authorized for 
    [90mdebug -[39m clearing poll timeout
    [90mdebug -[39m xhr-polling writing 1::
-   [90mdebug -[39m set close timeout for client 10279365891249591827
+   [90mdebug -[39m set close timeout for client 1012994566257599923
 in connect function socket...[object Object]
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429298299
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/1012994566257599923?t=1331287154694
    [90mdebug -[39m setting poll timeout
    [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 5:::{"name":"update","args":[{"data":"you are now connected"}]}
-   [90mdebug -[39m set close timeout for client 10279365891249591827
+   [90mdebug -[39m xhr-polling writing 5:::{"name":"update","args":[{"message":"welcome to the chatroom please enter a nick name","nick":"","date":"09/03/2012   :20:59:14"}]}
+   [90mdebug -[39m set close timeout for client 1012994566257599923
    [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 10279365891249591827
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429298317
+   [90mdebug -[39m cleared close timeout for client 1012994566257599923
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/1012994566257599923?t=1331287154758
    [90mdebug -[39m setting poll timeout
    [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 10279365891249591827
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429308825
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429319328
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429329802
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling received data packet 5:::{"name":"nickname","args":["Enter Nick Nama"]}
-   [90mdebug -[39m broadcasting packet
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 5:::{"name":"announcement","args":[{"message":"Enter Nick Nama has joined !","date":"28/02/2012   :22:42:09"}]}
-   [90mdebug -[39m set close timeout for client 10279365891249591827
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429329954
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 5:::{"name":"nicknames","args":[[{"name":"Enter Nick Nama"}]]}
-   [90mdebug -[39m set close timeout for client 10279365891249591827
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 10279365891249591827
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429329978
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 10279365891249591827
-   [90mdebug -[39m xhr-polling received data packet 5:::{"name":"user message","args":["    asfasfsa"]}
-    asfasfsa
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 5:::{"name":"update","args":[{"message":"    asfasfsa","nick":"socket.nickname","date":"28/02/2012   :22:42:13"}]}
-   [90mdebug -[39m set close timeout for client 10279365891249591827
-   [90mdebug -[39m broadcasting packet
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429333733
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 10279365891249591827
-   [90mdebug -[39m xhr-polling received data packet 5:::{"name":"user message","args":["asfasfasfasfa"]}
-asfasfasfasfa
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 5:::{"name":"update","args":[{"message":"asfasfasfasfa","nick":"socket.nickname","date":"28/02/2012   :22:42:17"}]}
-   [90mdebug -[39m set close timeout for client 10279365891249591827
-   [90mdebug -[39m broadcasting packet
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429337028
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 10279365891249591827
-   [90mdebug -[39m xhr-polling received data packet 5:::{"name":"nickname","args":["Enter Nick Nama"]}
-   [90mdebug -[39m broadcasting packet
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 5:::{"name":"announcement","args":[{"message":"Enter Nick Nama has joined !","date":"28/02/2012   :22:42:18"}]}
-   [90mdebug -[39m set close timeout for client 10279365891249591827
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429338399
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 5:::{"name":"nicknames","args":[[{"name":"Enter Nick Nama"},{"name":"Enter Nick Nama"}]]}
-   [90mdebug -[39m set close timeout for client 10279365891249591827
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 10279365891249591827
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429338415
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 10279365891249591827
-   [90mdebug -[39m xhr-polling received data packet 5:::{"name":"user message","args":["asfvasfasf"]}
-asfvasfasf
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 5:::{"name":"update","args":[{"message":"asfvasfasf","nick":"socket.nickname","date":"28/02/2012   :22:42:21"}]}
-   [90mdebug -[39m set close timeout for client 10279365891249591827
-   [90mdebug -[39m broadcasting packet
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429341292
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 10279365891249591827
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429351800
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429362304
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429372809
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429382814
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429393329
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429403832
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429414336
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429424839
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429435348
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 8::
-   [90mdebug -[39m set close timeout for client 10279365891249591827
-   [90mdebug -[39m xhr-polling closed due to exceeded duration
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429445852
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 10279365891249591827
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429455855
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429466397
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429476400
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429486903
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429497410
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429507414
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429517922
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429528427
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429538935
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 8::
-   [90mdebug -[39m set close timeout for client 10279365891249591827
-   [90mdebug -[39m xhr-polling closed due to exceeded duration
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429549438
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 10279365891249591827
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429559947
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429570450
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429580938
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429591447
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429601467
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429611970
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429622476
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429632479
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429642983
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 8::
-   [90mdebug -[39m set close timeout for client 10279365891249591827
-   [90mdebug -[39m xhr-polling closed due to exceeded duration
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429653525
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 10279365891249591827
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429664033
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429674537
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429685041
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429695545
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429706051
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429716554
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429727058
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429737561
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429748067
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 8::
-   [90mdebug -[39m set close timeout for client 10279365891249591827
-   [90mdebug -[39m xhr-polling closed due to exceeded duration
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429758571
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 10279365891249591827
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429769076
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429779585
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429790088
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429800592
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429811097
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429821101
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429831606
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429842132
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10279365891249591827?t=1330429852637
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 8::
-   [90mdebug -[39m set close timeout for client 10279365891249591827
-   [90mdebug -[39m xhr-polling closed due to exceeded duration
-   [90mdebug -[39m fired close timeout for client 10279365891249591827
-   [36minfo  -[39m transport end
-   [90mdebug -[39m discarding transport
+   [90mdebug -[39m cleared close timeout for client 1012994566257599923
