@@ -90,3 +90,35 @@ in connect function socket...[object Object]
    [90mdebug -[39m setting poll timeout
    [90mdebug -[39m discarding transport
    [90mdebug -[39m cleared close timeout for client 1893387563417528963
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/19862418221454879588?t=1331287280965
+   [90mdebug -[39m setting poll timeout
+   [90mdebug -[39m discarding transport
+   [90mdebug -[39m clearing poll timeout
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/1893387563417528963?t=1331287281274
+   [90mdebug -[39m setting poll timeout
+   [90mdebug -[39m discarding transport
+   [90mdebug -[39m clearing poll timeout
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/19862418221454879588?t=1331287291469
+   [90mdebug -[39m setting poll timeout
+   [90mdebug -[39m discarding transport
+   [90mdebug -[39m clearing poll timeout
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/1893387563417528963?t=1331287291800
+   [90mdebug -[39m setting poll timeout
+   [90mdebug -[39m discarding transport
+   [90mdebug -[39m clearing poll timeout
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/19862418221454879588?t=1331287301972
+   [90mdebug -[39m setting poll timeout
+   [90mdebug -[39m discarding transport
+   [90mdebug -[39m clearing poll timeout
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/1893387563417528963?t=1331287302305
+   [90mdebug -[39m setting poll timeout
+   [90mdebug -[39m discarding transport
+   [90mdebug -[39m clearing poll timeout
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/19862418221454879588?t=1331287312477
+   [90mdebug -[39m setting poll timeout
+   [90mdebug -[39m discarding transport
+   [90mdebug -[39m clearing poll timeout
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/1893387563417528963?t=1331287312808
+   [90mdebug -[39m setting poll timeout
+   [90mdebug -[39m discarding transport
+   [90mdebug -[39m clearing poll timeout
