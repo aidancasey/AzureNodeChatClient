@@ -27,7 +27,8 @@ var nicknames = new Array();
 io.sockets.on('connection', function (socket) 
               {
 
-              socket.emit('update', { message: 'welcome to the chatroom please enter a nick name to join.',nick:'',date : dateHelper.CurrentDateAndTime() });
+              //just send message to whoever cjust connected
+              socket.broadcast.emit('update', { message: 'welcome to the chatroom please enter a nick name to join.',nick:'',date : dateHelper.CurrentDateAndTime() });
 
               socket.on('user message', function (data) {
                          //back to self
