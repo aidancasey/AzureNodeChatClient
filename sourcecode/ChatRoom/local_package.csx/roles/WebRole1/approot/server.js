@@ -32,9 +32,9 @@ io.sockets.on('connection', function (socket)
 
               socket.on('user message', function (data) {
                          //back to self
-                         socket.emit('update', { message: data, nick: 'socket.nickname', date : dateHelper.CurrentDateAndTime() });
+                         socket.emit('update', { message: data, nick: socket.nickname, date : dateHelper.CurrentDateAndTime() });
                          //send to everyone
-                         socket.broadcast.emit('update', { message: data, nick: 'socket.nickname' , date : dateHelper.CurrentDateAndTime()});
+                         socket.broadcast.emit('update', { message: data, nick: socket.nickname , date : dateHelper.CurrentDateAndTime()});
                          //how do I asynchronously log to azure storage here
                          azureStorageHelper.LogEntry();
                          }
