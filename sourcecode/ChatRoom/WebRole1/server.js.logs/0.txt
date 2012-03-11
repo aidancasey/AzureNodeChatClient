@@ -1,228 +1,54 @@
    [36minfo  -[39m socket.io started
-   [90mdebug -[39m client authorized
-   [36minfo  -[39m handshake authorized 13580931141449596418
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/13580931141449596418?t=1331457513209
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m client authorized for 
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 1::
-   [90mdebug -[39m set close timeout for client 13580931141449596418
-   [90mdebug -[39m xhr-polling received data packet 5:::{"name":"nickname","args":["Enter Nick Nama"]}
-   [90mdebug -[39m broadcasting packet
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/13580931141449596418?t=1331457513270
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing �144�5:::{"name":"update","args":[{"message":"welcome to the chatroom please enter a nick name to join.","nick":"","date":"11/03/2012   :20:18:33"}]}�111�5:::{"name":"announcement","args":[{"message":"Enter Nick Nama has joined !","date":"11/03/2012   :20:18:33"}]}�62�5:::{"name":"nicknames","args":[[{"name":"Enter Nick Nama"}]]}
-   [90mdebug -[39m set close timeout for client 13580931141449596418
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 13580931141449596418
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/13580931141449596418?t=1331457513312
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 13580931141449596418
    [90mdebug -[39m served static content /socket.io.js
    [90mdebug -[39m client authorized
-   [36minfo  -[39m handshake authorized 3373973182109879019
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/3373973182109879019?t=1331457533288
+   [36minfo  -[39m handshake authorized 6000087721119813294
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/6000087721119813294?t=1331458575941
    [90mdebug -[39m setting poll timeout
    [90mdebug -[39m client authorized for 
    [90mdebug -[39m clearing poll timeout
    [90mdebug -[39m xhr-polling writing 1::
-   [90mdebug -[39m set close timeout for client 3373973182109879019
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/3373973182109879019?t=1331457533306
+   [90mdebug -[39m set close timeout for client 6000087721119813294
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/6000087721119813294?t=1331458575980
    [90mdebug -[39m setting poll timeout
    [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 5:::{"name":"update","args":[{"message":"welcome to the chatroom please enter a nick name to join.","nick":"","date":"11/03/2012   :20:18:53"}]}
-   [90mdebug -[39m set close timeout for client 3373973182109879019
+   [90mdebug -[39m xhr-polling writing 5:::{"name":"update","args":[{"message":"welcome to the chatroom please enter a nick name...","nick":"","date":"11/03/2012   :20:36:15"}]}
+   [90mdebug -[39m set close timeout for client 6000087721119813294
    [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 3373973182109879019
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 8::
-   [90mdebug -[39m set close timeout for client 13580931141449596418
-   [90mdebug -[39m xhr-polling closed due to exceeded duration
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/3373973182109879019?t=1331457533328
+   [90mdebug -[39m cleared close timeout for client 6000087721119813294
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/6000087721119813294?t=1331458576010
    [90mdebug -[39m setting poll timeout
    [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 3373973182109879019
-   [90mdebug -[39m served static content /socket.io.js
-   [90mdebug -[39m client authorized
-   [36minfo  -[39m handshake authorized 8105067721875377360
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/3373973182109879019?t=1331457543839
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/8105067721875377360?t=1331457551532
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m client authorized for 
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 1::
-   [90mdebug -[39m set close timeout for client 8105067721875377360
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/8105067721875377360?t=1331457551587
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 5:::{"name":"update","args":[{"message":"welcome to the chatroom please enter a nick name to join.","nick":"","date":"11/03/2012   :20:19:11"}]}
-   [90mdebug -[39m set close timeout for client 8105067721875377360
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 8105067721875377360
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/8105067721875377360?t=1331457551645
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 8105067721875377360
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/3373973182109879019?t=1331457554342
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m client authorized
-   [36minfo  -[39m handshake authorized 353566650483526143
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/353566650483526143?t=1331457556273
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m client authorized for 
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 1::
-   [90mdebug -[39m set close timeout for client 353566650483526143
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/353566650483526143?t=1331457556318
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 5:::{"name":"update","args":[{"message":"welcome to the chatroom please enter a nick name to join.","nick":"","date":"11/03/2012   :20:19:16"}]}
-   [90mdebug -[39m set close timeout for client 353566650483526143
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 353566650483526143
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/353566650483526143?t=1331457556337
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 353566650483526143
-   [90mdebug -[39m fired close timeout for client 13580931141449596418
-   [36minfo  -[39m transport end
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m xhr-polling received data packet 5:::{"name":"nickname","args":["Enter Nick Nama"]}
+   [90mdebug -[39m cleared close timeout for client 6000087721119813294
+   [90mdebug -[39m xhr-polling received data packet 5:::{"name":"nickname","args":["sdd"]}
    [90mdebug -[39m broadcasting packet
    [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 5:::{"name":"announcement","args":[{"message":"Enter Nick Nama has joined!","date":"11/03/2012   :20:19:21"}]}
-   [90mdebug -[39m set close timeout for client 3373973182109879019
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 5:::{"name":"announcement","args":[{"message":"Enter Nick Nama has joined!","date":"11/03/2012   :20:19:21"}]}
-   [90mdebug -[39m set close timeout for client 353566650483526143
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 5:::{"name":"announcement","args":[{"message":"Enter Nick Nama has joined !","date":"11/03/2012   :20:19:21"}]}
-   [90mdebug -[39m set close timeout for client 8105067721875377360
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/3373973182109879019?t=1331457561640
+   [90mdebug -[39m xhr-polling writing 5:::{"name":"announcement","args":[{"message":"sdd has joined !","date":"11/03/2012   :20:36:21"}]}
+   [90mdebug -[39m set close timeout for client 6000087721119813294
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/6000087721119813294?t=1331458581640
    [90mdebug -[39m setting poll timeout
    [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 5:::{"name":"nicknames","args":[[{"name":"Enter Nick Nama"},{"name":"Enter Nick Nama"}]]}
-   [90mdebug -[39m set close timeout for client 3373973182109879019
+   [90mdebug -[39m xhr-polling writing 5:::{"name":"nicknames","args":[[{"name":"sdd"}]]}
+   [90mdebug -[39m set close timeout for client 6000087721119813294
    [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 3373973182109879019
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/353566650483526143?t=1331457561653
+   [90mdebug -[39m cleared close timeout for client 6000087721119813294
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/6000087721119813294?t=1331458581673
    [90mdebug -[39m setting poll timeout
+   [90mdebug -[39m discarding transport
+   [90mdebug -[39m cleared close timeout for client 6000087721119813294
+   [90mdebug -[39m xhr-polling received data packet 5:::{"name":"user message","args":["    AND FINALLY"]}
    [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 5:::{"name":"nicknames","args":[[{"name":"Enter Nick Nama"},{"name":"Enter Nick Nama"}]]}
-   [90mdebug -[39m set close timeout for client 353566650483526143
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 353566650483526143
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/8105067721875377360?t=1331457561697
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 5:::{"name":"nicknames","args":[[{"name":"Enter Nick Nama"},{"name":"Enter Nick Nama"}]]}
-   [90mdebug -[39m set close timeout for client 8105067721875377360
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 8105067721875377360
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/3373973182109879019?t=1331457561711
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 3373973182109879019
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/353566650483526143?t=1331457561737
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 353566650483526143
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/8105067721875377360?t=1331457561762
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 8105067721875377360
-   [90mdebug -[39m xhr-polling received data packet 5:::{"name":"nickname","args":["IE"]}
+   [90mdebug -[39m xhr-polling writing 5:::{"name":"update","args":[{"message":"    AND FINALLY","nick":"sdd","date":"11/03/2012   :20:36:27"}]}
+   [90mdebug -[39m set close timeout for client 6000087721119813294
    [90mdebug -[39m broadcasting packet
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 5:::{"name":"announcement","args":[{"message":"IE has joined!","date":"11/03/2012   :20:19:29"}]}
-   [90mdebug -[39m set close timeout for client 8105067721875377360
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 5:::{"name":"announcement","args":[{"message":"IE has joined!","date":"11/03/2012   :20:19:29"}]}
-   [90mdebug -[39m set close timeout for client 353566650483526143
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 5:::{"name":"announcement","args":[{"message":"IE has joined !","date":"11/03/2012   :20:19:29"}]}
-   [90mdebug -[39m set close timeout for client 3373973182109879019
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/8105067721875377360?t=1331457569231
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 5:::{"name":"nicknames","args":[[{"name":"Enter Nick Nama"},{"name":"Enter Nick Nama"},{"name":"IE"}]]}
-   [90mdebug -[39m set close timeout for client 8105067721875377360
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 8105067721875377360
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/353566650483526143?t=1331457569206
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 5:::{"name":"nicknames","args":[[{"name":"Enter Nick Nama"},{"name":"Enter Nick Nama"},{"name":"IE"}]]}
-   [90mdebug -[39m set close timeout for client 353566650483526143
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 353566650483526143
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/3373973182109879019?t=1331457569208
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 5:::{"name":"nicknames","args":[[{"name":"Enter Nick Nama"},{"name":"Enter Nick Nama"},{"name":"IE"}]]}
-   [90mdebug -[39m set close timeout for client 3373973182109879019
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 3373973182109879019
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/353566650483526143?t=1331457569288
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/6000087721119813294?t=1331458587191
    [90mdebug -[39m setting poll timeout
    [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 353566650483526143
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/8105067721875377360?t=1331457569279
+   [90mdebug -[39m cleared close timeout for client 6000087721119813294
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/6000087721119813294?t=1331458597706
    [90mdebug -[39m setting poll timeout
    [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 8105067721875377360
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/3373973182109879019?t=1331457569307
+   [90mdebug -[39m clearing poll timeout
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/6000087721119813294?t=1331458608194
    [90mdebug -[39m setting poll timeout
    [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 3373973182109879019
-   [90mdebug -[39m xhr-polling received data packet 5:::{"name":"user message","args":["    dd"]}
    [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 5:::{"name":"update","args":[{"message":"    dd","nick":"Enter Nick Nama","date":"11/03/2012   :20:19:33"}]}
-   [90mdebug -[39m set close timeout for client 8105067721875377360
-   [90mdebug -[39m broadcasting packet
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 5:::{"name":"update","args":[{"message":"    dd","nick":"Enter Nick Nama","date":"11/03/2012   :20:19:33"}]}
-   [90mdebug -[39m set close timeout for client 3373973182109879019
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 5:::{"name":"update","args":[{"message":"    dd","nick":"Enter Nick Nama","date":"11/03/2012   :20:19:33"}]}
-   [90mdebug -[39m set close timeout for client 353566650483526143
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/3373973182109879019?t=1331457573716
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 3373973182109879019
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/8105067721875377360?t=1331457573716
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 8105067721875377360
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/353566650483526143?t=1331457573757
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 353566650483526143
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 8::
-   [90mdebug -[39m set close timeout for client 3373973182109879019
-   [90mdebug -[39m xhr-polling closed due to exceeded duration
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 8::
-   [90mdebug -[39m set close timeout for client 8105067721875377360
-   [90mdebug -[39m xhr-polling closed due to exceeded duration
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 8::
-   [90mdebug -[39m set close timeout for client 353566650483526143
-   [90mdebug -[39m xhr-polling closed due to exceeded duration
-   [90mdebug -[39m fired close timeout for client 3373973182109879019
-   [36minfo  -[39m transport end
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m fired close timeout for client 8105067721875377360
-   [36minfo  -[39m transport end
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m fired close timeout for client 353566650483526143
-   [36minfo  -[39m transport end
-   [90mdebug -[39m discarding transport

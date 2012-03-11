@@ -32,10 +32,13 @@ io.sockets.on('connection', function (socket)
 
               socket.on('user message', function (data) {
                          //back to self
-                         socket.emit('update', { message: data, nick: socket.nickname, date : dateHelper.CurrentDateAndTime() });
+
+                         var timestamp =dateHelper.CurrentDateAndTime();
+
+                         socket.emit('update', { message: data, nick: socket.nickname, date : timestamp });
                          //send to everyone
-                         socket.broadcast.emit('update', { message: data, nick: socket.nickname , date : dateHelper.CurrentDateAndTime()});
-                         azureStorageHelper.LogEntry();
+                         socket.broadcast.emit('update', { message: data, nick: socket.nickname , date : timestamp});
+                         azureStorageHelper.LogEntry(data,socket.nickname);
                          }
                        );
 
