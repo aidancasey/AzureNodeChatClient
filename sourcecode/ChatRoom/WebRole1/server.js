@@ -27,15 +27,14 @@ var nicknames = new Array();
 io.sockets.on('connection', function (socket) 
               {
 
-              //just send message to whoever cjust connected
-              socket.broadcast.emit('update', { message: 'welcome to the chatroom please enter a nick name to join.',nick:'',date : dateHelper.CurrentDateAndTime() });
+              //send message to whoever just connected
+              socket.emit('update', { message: 'welcome to the chatroom please enter a nick name...',nick:'',date : dateHelper.CurrentDateAndTime() });
 
               socket.on('user message', function (data) {
                          //back to self
                          socket.emit('update', { message: data, nick: socket.nickname, date : dateHelper.CurrentDateAndTime() });
                          //send to everyone
                          socket.broadcast.emit('update', { message: data, nick: socket.nickname , date : dateHelper.CurrentDateAndTime()});
-                         //how do I asynchronously log to azure storage here
                          azureStorageHelper.LogEntry();
                          }
                        );
@@ -44,11 +43,9 @@ io.sockets.on('connection', function (socket)
                         nicknames.push({name: nick});
                         nicknames[nick] = socket.nickname = nick;
                         socket.broadcast.emit('announcement', { message: nick + ' has joined!',  date : dateHelper.CurrentDateAndTime() });
-                        //hack broadcast sshould do this...
                         socket.emit('announcement', { message: nick + ' has joined !', date : dateHelper.CurrentDateAndTime() });
                         io.sockets.emit('nicknames', nicknames);
                             }
                         );
-
                 }
               );
