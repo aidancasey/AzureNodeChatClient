@@ -68,19 +68,25 @@ a:hover { text-decoration: underline; color: #aaa; }
 
 #log {
   display: block;
-  /* enough padding to clear the toolbar.. is there a better way to do this? */
   padding-bottom: 5.1em; 
   background: inherit;
   overflow: hidden;
 }
 
-/* not very important info */
+
 .notice td, .join td, .part td, .message .date { color: #555; }
 .error td { color: #933; }
 .personal .nick, .notice .nick { color: #cd5; }
 
 .message {
   margin: 0.1em 0;
+
+}
+
+ textarea{
+  width :457px;
+  height:85px;
+
 }
 
 .message td {

@@ -1,17 +1,10 @@
 <!doctype html>
 <html>
 <head>
-<script src="/socket.io/socket.io.js"></script>
-<script type="text/javascript"  src="/scripts/jquery.min.js"> </script> 
-<script type="text/javascript"  src="/scripts/knockout-2.0.0.js"> </script> 
-<link rel="stylesheet" href="/scripts/style.css" type="text/css"/>
-    <style type="text/css">
-        #message
-        {
-            width: 457px;
-            height: 85px;
-        }
-    </style>
+  <script src="/socket.io/socket.io.js"></script>
+  <script type="text/javascript"  src="/scripts/jquery.min.js"> </script> 
+  <script type="text/javascript"  src="/scripts/knockout-2.0.0.js"> </script> 
+  <link rel="stylesheet" href="/scripts/style.css" type="text/css"/>
 </head>
 <body>
 
@@ -34,15 +27,11 @@
     </tbody>
     </table>
       </div>
-
     &nbsp;&nbsp;&nbsp;&nbsp;
-
-    <textarea  name="message" id="message" rows="2" cols="2">
+    <textarea name="message" id="message" rows="2" cols="2">
     </textarea>
-
     <input id="client" name="client" value="" type="hidden" />
     <input type="button" name="send" id="send" value="Send" onclick="sendMessage();" />
-     
      <div id="toolbar1">
      <table id="toolbar" class="toolbar">
       <tbody>
@@ -53,7 +42,6 @@
         </tr>
      </table>
      </div>
-
        <script type="text/html" id="nickname-template">          
        <span data-bind="text: name">
        </span>
@@ -63,26 +51,20 @@
 
           var model = new ViewModel();
 
-
 //cloud
 //var socket = io.connect('http://AidansChattyRoom4.cloudapp.net'); 
 
 //node
 //var socket = io.connect('http://localhost:4567'); 
 
-
 //emulator
 var socket = io.connect('http://localhost:81'); 
  
-
  socket.on('update', function(data){
-
     model.message.push({ date: data.date, nick: data.nick, message: data.message });
-  
     });
 
  socket.on('announcement', function(data){
-
     model.message.push({ date: data.date, nick: data.nick, message: data.message });
     });
 
@@ -111,7 +93,6 @@ function Join()
 
 }
 
-
 // send a message to the server
     function sendMessage()
     {
@@ -120,8 +101,6 @@ try
     var msg = $("textarea#message").val();
     $("textarea#message").val('');
          socket.emit('user message', msg);
-     //  appendMessage('You: ' + msg); // show the message
-
 }
 catch(err)
 {
@@ -137,7 +116,6 @@ catch(err)
             }
 
     ko.applyBindings(model);
-  
 </script>
 </BODY>
 </HTML>
