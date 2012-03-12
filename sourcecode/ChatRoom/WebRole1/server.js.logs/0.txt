@@ -34,3 +34,10 @@
    [90mdebug -[39m setting poll timeout
    [90mdebug -[39m discarding transport
    [90mdebug -[39m cleared close timeout for client 14557493752087055346
+   [90mdebug -[39m clearing poll timeout
+   [90mdebug -[39m xhr-polling writing 8::
+   [90mdebug -[39m set close timeout for client 14557493752087055346
+   [90mdebug -[39m xhr-polling closed due to exceeded duration
+   [90mdebug -[39m fired close timeout for client 14557493752087055346
+   [36minfo  -[39m transport end
+   [90mdebug -[39m discarding transport
