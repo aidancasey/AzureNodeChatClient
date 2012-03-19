@@ -1,32 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AidansChattyRoom4" generation="1" functional="0" release="0" Id="3249ebfb-425c-4bd5-b1ee-fac631ab2897" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="saugchatroomapp" generation="1" functional="0" release="0" Id="76892257-baa2-4c4f-86f6-bd2c152f3010" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
-    <group name="AidansChattyRoom4Group" generation="1" functional="0" release="0">
+    <group name="saugchatroomappGroup" generation="1" functional="0" release="0">
       <componentports>
         <inPort name="WebRole1:Endpoint1" protocol="http">
           <inToChannel>
-            <lBChannelMoniker name="/AidansChattyRoom4/AidansChattyRoom4Group/LB:WebRole1:Endpoint1" />
+            <lBChannelMoniker name="/saugchatroomapp/saugchatroomappGroup/LB:WebRole1:Endpoint1" />
           </inToChannel>
         </inPort>
       </componentports>
       <settings>
         <aCS name="WebRole1Instances" defaultValue="[1,1,1]">
           <maps>
-            <mapMoniker name="/AidansChattyRoom4/AidansChattyRoom4Group/MapWebRole1Instances" />
+            <mapMoniker name="/saugchatroomapp/saugchatroomappGroup/MapWebRole1Instances" />
           </maps>
         </aCS>
       </settings>
       <channels>
         <lBChannel name="LB:WebRole1:Endpoint1">
           <toPorts>
-            <inPortMoniker name="/AidansChattyRoom4/AidansChattyRoom4Group/WebRole1/Endpoint1" />
+            <inPortMoniker name="/saugchatroomapp/saugchatroomappGroup/WebRole1/Endpoint1" />
           </toPorts>
         </lBChannel>
       </channels>
       <maps>
         <map name="MapWebRole1Instances" kind="Identity">
           <setting>
-            <sCSPolicyIDMoniker name="/AidansChattyRoom4/AidansChattyRoom4Group/WebRole1Instances" />
+            <sCSPolicyIDMoniker name="/saugchatroomapp/saugchatroomappGroup/WebRole1Instances" />
           </setting>
         </map>
       </maps>
@@ -45,8 +45,8 @@
             </resourcereferences>
           </role>
           <sCSPolicy>
-            <sCSPolicyIDMoniker name="/AidansChattyRoom4/AidansChattyRoom4Group/WebRole1Instances" />
-            <sCSPolicyFaultDomainMoniker name="/AidansChattyRoom4/AidansChattyRoom4Group/WebRole1FaultDomains" />
+            <sCSPolicyIDMoniker name="/saugchatroomapp/saugchatroomappGroup/WebRole1Instances" />
+            <sCSPolicyFaultDomainMoniker name="/saugchatroomapp/saugchatroomappGroup/WebRole1FaultDomains" />
           </sCSPolicy>
         </groupHascomponents>
       </components>
@@ -57,11 +57,11 @@
     </group>
   </groups>
   <implements>
-    <implementation Id="0879d0c0-5b16-4ea2-95b0-218ee1ad5025" ref="Microsoft.RedDog.Contract\ServiceContract\AidansChattyRoom4Contract@ServiceDefinition">
+    <implementation Id="c9781003-d5d6-4f0d-874a-dea136b684d0" ref="Microsoft.RedDog.Contract\ServiceContract\saugchatroomappContract@ServiceDefinition">
       <interfacereferences>
-        <interfaceReference Id="af854623-17ac-4fb3-a80a-1da3d9258007" ref="Microsoft.RedDog.Contract\Interface\WebRole1:Endpoint1@ServiceDefinition">
+        <interfaceReference Id="0acae048-5557-4394-81b4-93545fb08cf3" ref="Microsoft.RedDog.Contract\Interface\WebRole1:Endpoint1@ServiceDefinition">
           <inPort>
-            <inPortMoniker name="/AidansChattyRoom4/AidansChattyRoom4Group/WebRole1:Endpoint1" />
+            <inPortMoniker name="/saugchatroomapp/saugchatroomappGroup/WebRole1:Endpoint1" />
           </inPort>
         </interfaceReference>
       </interfacereferences>

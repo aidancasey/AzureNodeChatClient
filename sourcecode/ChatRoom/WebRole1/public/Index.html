@@ -52,13 +52,12 @@
           var model = new ViewModel();
 
 //cloud
-//var socket = io.connect('http://AidansChattyRoom4.cloudapp.net'); 
-
+var socket = io.connect('http://saugchatroomapp1.cloudapp.net'); 
 //node
 //var socket = io.connect('http://localhost:4567'); 
 
 //emulator
-var socket = io.connect('http://localhost:81'); 
+//var socket = io.connect('http://localhost:81'); 
  
  socket.on('update', function(data){
     model.message.push({ date: data.date, nick: data.nick, message: data.message });
