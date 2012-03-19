@@ -4,6 +4,13 @@ app.listen(process.env.port || 4567);
 
   
 var io = require('socket.io').listen(app);  
+
+// assuming io is the Socket.IO server object
+io.configure(function () { 
+  io.set("transports", ["xhr-polling"]); 
+  io.set("polling duration", 10); 
+});
+
 var fs = require('fs');
 var dateHelper = require("./dateHelper");
 var azureStorageHelper = require("./azureStorageHelper");
@@ -28,7 +35,7 @@ io.sockets.on('connection', function (socket)
               {
 
               //send message to whoever just connected
-              socket.emit('update', { message: 'welcome to the chatroom please enter a nick name...',nick:'',date : dateHelper.CurrentDateAndTime() });
+              socket.emit('welcome', { message: 'welcome to the chatroom please enter a nick name...',nick:'',date : dateHelper.CurrentDateAndTime() });
 
               socket.on('user message', function (data) {
                          //back to self

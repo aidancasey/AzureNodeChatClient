@@ -52,15 +52,26 @@
           var model = new ViewModel();
 
 //cloud
-var socket = io.connect('http://saugchatroomapp1.cloudapp.net'); 
+//var socket = io.connect('http://saugchatroomapp3.cloudapp.net'); 
 //node
 //var socket = io.connect('http://localhost:4567'); 
 
 //emulator
 //var socket = io.connect('http://localhost:81'); 
- 
+
+var socket = io.connect(); 
+var count1 = 0;
+
+
  socket.on('update', function(data){
     model.message.push({ date: data.date, nick: data.nick, message: data.message });
+    });
+
+
+ socket.on('welcome', function(data){
+       if (count1==0)
+       model.message.push({ date: data.date, nick: data.nick, message: data.message });
+       count1++;
     });
 
  socket.on('announcement', function(data){
