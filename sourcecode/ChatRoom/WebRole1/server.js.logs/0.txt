@@ -1,43 +1,39 @@
    [36minfo  -[39m socket.io started
-   [90mdebug -[39m client authorized
-   [36minfo  -[39m handshake authorized 15042880351400834155
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/19906587332040387588?t=1331459627984
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/10495424931711040105?t=1332140677019
    [90mdebug -[39m setting poll timeout
    [90mdebug -[39m clearing poll timeout
    [90mdebug -[39m xhr-polling writing 7:::1+0
-   [90mdebug -[39m set close timeout for client 19906587332040387588
+   [90mdebug -[39m set close timeout for client 10495424931711040105
    [33mwarn  -[39m client not handshaken client should reconnect
    [36minfo  -[39m transport end
-   [90mdebug -[39m cleared close timeout for client 19906587332040387588
+   [90mdebug -[39m cleared close timeout for client 10495424931711040105
    [90mdebug -[39m discarding transport
    [90mdebug -[39m discarding transport
    [90mdebug -[39m xhr-polling received data packet 0::
    [90mdebug -[39m got disconnection packet
    [90mdebug -[39m client authorized
-   [36minfo  -[39m handshake authorized 6657427941773533749
-   [90mdebug -[39m client authorized
-   [36minfo  -[39m handshake authorized 14557493752087055346
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/14557493752087055346?t=1331459628659
+   [36minfo  -[39m handshake authorized 1191739491329562652
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/1191739491329562652?t=1332140679582
    [90mdebug -[39m setting poll timeout
    [90mdebug -[39m client authorized for 
    [90mdebug -[39m clearing poll timeout
    [90mdebug -[39m xhr-polling writing 1::
-   [90mdebug -[39m set close timeout for client 14557493752087055346
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/14557493752087055346?t=1331459628685
+   [90mdebug -[39m set close timeout for client 1191739491329562652
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/1191739491329562652?t=1332140679644
    [90mdebug -[39m setting poll timeout
    [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 5:::{"name":"update","args":[{"message":"welcome to the chatroom please enter a nick name...","nick":"","date":"11/03/2012   :20:53:48"}]}
-   [90mdebug -[39m set close timeout for client 14557493752087055346
+   [90mdebug -[39m xhr-polling writing 5:::{"name":"update","args":[{"message":"welcome to the chatroom please enter a nick name...","nick":"","date":"19/03/2012   :18:04:39"}]}
+   [90mdebug -[39m set close timeout for client 1191739491329562652
    [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 14557493752087055346
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/14557493752087055346?t=1331459628705
+   [90mdebug -[39m cleared close timeout for client 1191739491329562652
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/1191739491329562652?t=1332140679672
    [90mdebug -[39m setting poll timeout
    [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 14557493752087055346
+   [90mdebug -[39m cleared close timeout for client 1191739491329562652
    [90mdebug -[39m clearing poll timeout
    [90mdebug -[39m xhr-polling writing 8::
-   [90mdebug -[39m set close timeout for client 14557493752087055346
+   [90mdebug -[39m set close timeout for client 1191739491329562652
    [90mdebug -[39m xhr-polling closed due to exceeded duration
-   [90mdebug -[39m fired close timeout for client 14557493752087055346
+   [90mdebug -[39m fired close timeout for client 1191739491329562652
    [36minfo  -[39m transport end
    [90mdebug -[39m discarding transport
